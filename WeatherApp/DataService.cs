@@ -9,15 +9,14 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using System.
 
 namespace WeatherApp
 {
     public class DataService
     {
-        public static async Task<dynamic> GetDataFromService()
-        {
-            HttpClient client = new HttpClient();
-        }
+        //public static async Task<dynamic> GetDataFromService()
+        //{
+        //    HttpClient client = new HttpClient();
+        //}
     }
 }
