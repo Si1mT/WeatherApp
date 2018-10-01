@@ -24,6 +24,5 @@ namespace WeatherApp
             }
             return data;
         }
-
     }
 }
