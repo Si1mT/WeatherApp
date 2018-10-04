@@ -10,6 +10,7 @@ namespace WeatherApp
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        ImageButton button;
         TextView textview;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -18,8 +19,10 @@ namespace WeatherApp
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            var button = FindViewById<Button>(Resource.Id.button1);
-            textview = FindViewById<TextView>(Resource.Id.textView1);
+            button = FindViewById<ImageButton>(Resource.Id.imageButton1);
+            //button.SetImageDrawable("@Resource/drawable/searchicon");
+            //button.SetBackgroundDrawable = ImageLayout.Stretch;
+            //textview = FindViewById<TextView>(Resource.Id.textView1);
 
             button.Click += Button_Click;
         }

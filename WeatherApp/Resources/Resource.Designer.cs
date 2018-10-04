@@ -2429,9 +2429,6 @@ namespace WeatherApp
 			// aapt resource value: 0x7f08003d
 			public const int bottom = 2131230781;
 			
-			// aapt resource value: 0x7f08008c
-			public const int button1 = 2131230860;
-			
 			// aapt resource value: 0x7f080063
 			public const int buttonPanel = 2131230819;
 			
@@ -2584,6 +2581,9 @@ namespace WeatherApp
 			
 			// aapt resource value: 0x7f08008b
 			public const int linearLayout1 = 2131230859;
+			
+			// aapt resource value: 0x7f08008c
+			public const int linearLayout2 = 2131230860;
 			
 			// aapt resource value: 0x7f08001d
 			public const int listMode = 2131230749;
@@ -2783,14 +2783,14 @@ namespace WeatherApp
 			// aapt resource value: 0x7f08001b
 			public const int text2 = 2131230747;
 			
+			// aapt resource value: 0x7f08008d
+			public const int textInputEditText1 = 2131230861;
+			
 			// aapt resource value: 0x7f08006a
 			public const int textSpacerNoButtons = 2131230826;
 			
 			// aapt resource value: 0x7f080069
 			public const int textSpacerNoTitle = 2131230825;
-			
-			// aapt resource value: 0x7f08008d
-			public const int textView1 = 2131230861;
 			
 			// aapt resource value: 0x7f08009b
 			public const int text_input_password_toggle = 2131230875;
