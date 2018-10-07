@@ -11,8 +11,9 @@ using System.Text;
 //using Android.Views;
 //using Android.Widget;
 
-namespace WeatherApp
+namespace WeatherAppTwo
 {
+    //defines weather data properties
     public class Weather
     {
         public string Temperature { get; set; } = " ";

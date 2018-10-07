@@ -1,9 +1,11 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
-using WeatherApp.Core;
+//using WeatherApp.Core;
+using Android;
 
 namespace WeatherApp
 {
@@ -17,9 +19,10 @@ namespace WeatherApp
         {
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
+            //SetContentView(Resource.Layout.activity_main);
 
-            button = FindViewById<ImageButton>(Resource.Id.imageButton1);
+
+            //button = FindViewById<ImageButton>(Resource.Id.imageButton1);
             //button.SetImageDrawable("@Resource/drawable/searchicon");
             //button.SetBackgroundDrawable = ImageLayout.Stretch;
             //textview = FindViewById<TextView>(Resource.Id.textView1);
@@ -29,8 +32,8 @@ namespace WeatherApp
 
         private async void Button_Click(object sender, System.EventArgs e)
         {
-            var weather = await Core.Core.GetWeather("asd");
-            textview.Text = weather.Temperature;
+            //var weather = await Core.Core.GetWeather("asd");
+            //textview.Text = weather.Temperature;
         }
     }
 }

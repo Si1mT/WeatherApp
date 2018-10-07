@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherAppTwo;
 
-namespace WeatherApp.Core
+namespace WeatherAppTwo.Core
 {
     public class Core
     {
+        //gets weather data from openweathermap api and defines Weather class properties with it
         public static async Task<Weather> GetWeather(string zipCode)
         {
             string key = "43228feda419c96e87f49c3f0b8bbaea";
