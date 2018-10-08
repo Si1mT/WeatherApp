@@ -12,30 +12,40 @@ namespace WeatherAppTwo
     public class MainActivity : AppCompatActivity
     {
         Button button;
-        TextView textview;
+        EditText editTextCityName;
+        TextView textViewCity;
+        TextView textViewTemperature;
         TextView textViewDate;
-        //DateTime Date;
+        TextView textViewHumidity;
+        TextView textViewWind;
         
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            textViewDate = FindViewById<TextView>(Resource.Id.textView_date);
-            button = FindViewById<Button>(Resource.Id.button1);
-            textview = FindViewById<TextView>(Resource.Id.textView1);
+            editTextCityName = FindViewById<EditText>(Resource.Id.textInputEditText_CityName);
+            textViewCity = FindViewById<TextView>(Resource.Id.textView_City);
+            textViewDate = FindViewById<TextView>(Resource.Id.textView_Date);
+            button = FindViewById<Button>(Resource.Id.button_Search);
+            textViewTemperature = FindViewById<TextView>(Resource.Id.textView_Temperature);
+            textViewHumidity = FindViewById<TextView>(Resource.Id.textView_Humidity);
+            textViewWind = FindViewById<TextView>(Resource.Id.textView_Wind);
+            
 
             button.Click += Button_Click;
-
-            DateTime.UtcNow.ToString();
         }
 
         private async void Button_Click(object sender, System.EventArgs e)
         {
-            var weather = await Core.Core.GetWeather("asd");
-            textview.Text = weather.Temperature;
+            string city = editTextCityName.Text;
+            var weather = await Core.Core.GetWeather("asd",city);
+            
+            textViewCity.Text = editTextCityName.Text;
+            textViewTemperature.Text = weather.Temperature;
+            textViewHumidity.Text = weather.Humidity;
+            textViewWind.Text = weather.WindSpeed;
             textViewDate.Text = DateTime.Now.ToString();
         }
     }

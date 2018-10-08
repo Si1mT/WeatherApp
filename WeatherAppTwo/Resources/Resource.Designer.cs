@@ -2805,7 +2805,7 @@ namespace WeatherAppTwo
 			public const int text2 = 2131230747;
 			
 			// aapt resource value: 0x7f08008c
-			public const int textInputEditText1 = 2131230860;
+			public const int textInputEditText_CityName = 2131230860;
 			
 			// aapt resource value: 0x7f08006a
 			public const int textSpacerNoButtons = 2131230826;
