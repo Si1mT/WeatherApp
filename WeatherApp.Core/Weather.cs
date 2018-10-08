@@ -17,5 +17,6 @@ namespace WeatherAppTwo
     public class Weather
     {
         public string Temperature { get; set; } = " ";
+        public string Humidity { get; set; } = " ";
     }
 }         

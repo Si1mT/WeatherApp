@@ -11,7 +11,7 @@
 		android:orientation="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:id="@+id/linearLayout1" >
+		android:id="@+id/linearLayout1">
 		<android.support.design.widget.TextInputEditText
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -19,24 +19,89 @@
 			android:minHeight="25px"
 			android:id="@+id/textInputEditText1" />
 		<Button
-			android:text="Button"
+			android:text="Search"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:id="@+id/button1" />
-		<TextView
-			android:text="Large Text"
-			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:id="@+id/button_Search" />
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
 			android:layout_width="match_parent"
-			android:layout_height="75dp"
-			android:gravity="center"
-			android:id="@+id/textView_date"
-			android:textSize="80px" />
-		<TextView
-			android:text="Large Text"
-			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_height="55.0dp"
+			android:id="@+id/linearLayout_CityAndDate" >
+			<TextView
+				android:text="City Name"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="184.0dp"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:id="@+id/textView_City" />
+			<TextView
+				android:text="Date"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center"
+				android:id="@+id/textView_Date" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:id="@+id/textView1" />
+			android:layout_height="55.0dp"
+			android:id="@+id/linearLayout_Temperature">
+			<ImageView
+				android:src="@android:drawable/ic_menu_gallery"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/imageView_Temperature" />
+			<TextView
+				android:text="Temperature"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/textView_Temperature" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="55.0dp"
+			android:id="@+id/linearLayout_Humidity">
+			<ImageView
+				android:src="@android:drawable/ic_menu_gallery"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/imageView_Humidity" />
+			<TextView
+				android:text="Humidity"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/textView_Humidity" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="55.0dp"
+			android:id="@+id/linearLayout_Wind" >
+			<ImageView
+				android:src="@android:drawable/ic_menu_gallery"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/imageView_Wind" />
+			<TextView
+				android:text="Wind Speed"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/textView_Wind" />
+		</LinearLayout>
 	</LinearLayout>
 
 </RelativeLayout>

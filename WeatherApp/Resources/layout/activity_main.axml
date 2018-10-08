@@ -26,5 +26,5 @@
 				android:id="@+id/textView1"
 				android:layout_marginRight="0.0dp" />
 		</LinearLayout>
-	
+	</LinearLayout>
 </RelativeLayout>
