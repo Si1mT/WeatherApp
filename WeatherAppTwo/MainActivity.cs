@@ -11,7 +11,7 @@ namespace WeatherAppTwo
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        Button button;
+        Button buttonSearch;
         EditText editTextCityName;
         TextView textViewCity;
         TextView textViewTemperature;
@@ -28,16 +28,15 @@ namespace WeatherAppTwo
             editTextCityName = FindViewById<EditText>(Resource.Id.textInputEditText_CityName);
             textViewCity = FindViewById<TextView>(Resource.Id.textView_City);
             textViewDate = FindViewById<TextView>(Resource.Id.textView_Date);
-            button = FindViewById<Button>(Resource.Id.button_Search);
+            buttonSearch = FindViewById<Button>(Resource.Id.button_Search);
             textViewTemperature = FindViewById<TextView>(Resource.Id.textView_Temperature);
             textViewHumidity = FindViewById<TextView>(Resource.Id.textView_Humidity);
             textViewWind = FindViewById<TextView>(Resource.Id.textView_Wind);
-            
 
-            button.Click += Button_Click;
+            buttonSearch.Click += Button_Click;
         }
 
-        private async void Button_Click(object sender, System.EventArgs e)
+        private async void Button_Click(object sender, EventArgs e)
         {
             string city = editTextCityName.Text;
             var weather = await Core.Core.GetWeather("asd",city);
