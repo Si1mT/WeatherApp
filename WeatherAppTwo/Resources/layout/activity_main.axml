@@ -46,10 +46,17 @@
 				android:id="@+id/textView_Date" />
 		</LinearLayout>
 		<ImageView
-			android:src="@android:drawable/ic_menu_gallery"
+			android:src="@drawable/questionmark"
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:id="@+id/imageView1" />
+			android:layout_height="100.0dp"
+			android:id="@+id/imageView_WeatherState" />
+		<TextView
+			android:text=""
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="match_parent"
+			android:layout_height="56.3dp"
+			android:gravity="center"
+			android:id="@+id/textView_WeatherDescription" />
 		<LinearLayout
 			android:orientation="horizontal"
 			android:minWidth="25px"

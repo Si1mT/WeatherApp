@@ -19,6 +19,8 @@ namespace WeatherAppTwo.Core
             weather.Temperature = (string)results["main"]["temp"] + "C";
             weather.Humidity = (string)results["main"]["humidity"] + "%";
             weather.WindSpeed = (string)results["wind"]["speed"] + "m/s";
+            weather.WeatherState = (string)results["weather"][0]["description"];
+            weather.WeatherDescription = (string)results["weather"][0]["main"];
 
             return weather;
         }

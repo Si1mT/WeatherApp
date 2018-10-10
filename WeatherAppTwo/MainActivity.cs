@@ -18,6 +18,8 @@ namespace WeatherAppTwo
         TextView textViewDate;
         TextView textViewHumidity;
         TextView textViewWind;
+        ImageView imageViewWeatherState;
+        TextView textViewWeatherDescription;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -32,6 +34,8 @@ namespace WeatherAppTwo
             textViewTemperature = FindViewById<TextView>(Resource.Id.textView_Temperature);
             textViewHumidity = FindViewById<TextView>(Resource.Id.textView_Humidity);
             textViewWind = FindViewById<TextView>(Resource.Id.textView_Wind);
+            imageViewWeatherState = FindViewById<ImageView>(Resource.Id.imageView_WeatherState);
+            textViewWeatherDescription = FindViewById<TextView>(Resource.Id.textView_WeatherDescription);
 
             buttonSearch.Click += Button_Click;
         }
@@ -45,7 +49,37 @@ namespace WeatherAppTwo
             textViewTemperature.Text = weather.Temperature;
             textViewHumidity.Text = weather.Humidity;
             textViewWind.Text = weather.WindSpeed;
-            textViewDate.Text = DateTime.Now.ToString();
+            textViewDate.Text = DateTime.Now.ToString("MMMM dd");
+            textViewWeatherDescription.Text = weather.WeatherDescription;
+
+            switch (weather.WeatherState)
+            {
+                case ("few clouds"):
+                    imageViewWeatherState.SetImageResource(Resource.Drawable.fewClouds);
+                    break;
+                case ("clear sky"):
+                    imageViewWeatherState.SetImageResource(Resource.Drawable.clearSky);
+                    break;
+                case ("rain"):
+                    imageViewWeatherState.SetImageResource(Resource.Drawable.rain);
+                    break;
+                case ("thunderstorm"):
+                    imageViewWeatherState.SetImageResource(Resource.Drawable.thunderstorm);
+                    break;
+                case ("shower rain"):
+                    imageViewWeatherState.SetImageResource(Resource.Drawable.showerRain);
+                    break;
+                case ("snow"):
+                    imageViewWeatherState.SetImageResource(Resource.Drawable.snow);
+                    break;
+                case ("mist"):
+                    imageViewWeatherState.SetImageResource(Resource.Drawable.mist);
+                    break;
+                case ("fog"):
+                    imageViewWeatherState.SetImageResource(Resource.Drawable.mist);
+                    break;
+
+            }
         }
     }
 }
