@@ -18,7 +18,7 @@ namespace WeatherAppTwo
         TextView textViewDate;
         TextView textViewHumidity;
         TextView textViewWind;
-        
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -39,8 +39,8 @@ namespace WeatherAppTwo
         private async void Button_Click(object sender, EventArgs e)
         {
             string city = editTextCityName.Text;
-            var weather = await Core.Core.GetWeather("asd",city);
-            
+            var weather = await Core.Core.GetWeather("asd", city);
+
             textViewCity.Text = editTextCityName.Text;
             textViewTemperature.Text = weather.Temperature;
             textViewHumidity.Text = weather.Humidity;

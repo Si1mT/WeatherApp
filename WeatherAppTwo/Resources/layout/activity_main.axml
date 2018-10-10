@@ -29,7 +29,7 @@
 			android:minHeight="25px"
 			android:layout_width="match_parent"
 			android:layout_height="55.0dp"
-			android:id="@+id/linearLayout_CityAndDate" >
+			android:id="@+id/linearLayout_CityAndDate">
 			<TextView
 				android:text="City Name"
 				android:textAppearance="?android:attr/textAppearanceLarge"
@@ -45,17 +45,22 @@
 				android:gravity="center"
 				android:id="@+id/textView_Date" />
 		</LinearLayout>
+		<ImageView
+			android:src="@android:drawable/ic_menu_gallery"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/imageView1" />
 		<LinearLayout
 			android:orientation="horizontal"
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:layout_width="match_parent"
-			android:layout_height="55.0dp"
+			android:layout_height="65.0dp"
 			android:id="@+id/linearLayout_Temperature">
 			<ImageView
-				android:src="@android:drawable/ic_menu_gallery"
-				android:layout_width="wrap_content"
-				android:layout_height="match_parent"
+				android:src="@drawable/temperature"
+				android:layout_width="120.0dp"
+				android:layout_height="60.0dp"
 				android:id="@+id/imageView_Temperature" />
 			<TextView
 				android:text="Temperature"
@@ -69,12 +74,12 @@
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:layout_width="match_parent"
-			android:layout_height="55.0dp"
+			android:layout_height="65.0dp"
 			android:id="@+id/linearLayout_Humidity">
 			<ImageView
-				android:src="@android:drawable/ic_menu_gallery"
-				android:layout_width="wrap_content"
-				android:layout_height="match_parent"
+				android:src="@drawable/humidity"
+				android:layout_width="120.0dp"
+				android:layout_height="60.0dp"
 				android:id="@+id/imageView_Humidity" />
 			<TextView
 				android:text="Humidity"
@@ -88,12 +93,12 @@
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:layout_width="match_parent"
-			android:layout_height="55.0dp"
-			android:id="@+id/linearLayout_Wind" >
+			android:layout_height="65.0dp"
+			android:id="@+id/linearLayout_Wind">
 			<ImageView
-				android:src="@android:drawable/ic_menu_gallery"
-				android:layout_width="wrap_content"
-				android:layout_height="match_parent"
+				android:src="@drawable/wind"
+				android:layout_width="120.0dp"
+				android:layout_height="60.0dp"
 				android:id="@+id/imageView_Wind" />
 			<TextView
 				android:text="Wind Speed"
@@ -103,5 +108,4 @@
 				android:id="@+id/textView_Wind" />
 		</LinearLayout>
 	</LinearLayout>
-
 </RelativeLayout>
