@@ -7,112 +7,120 @@
 	android:layout_height="match_parent"
 	android:minWidth="25px"
 	android:minHeight="25px">
-	<LinearLayout
-		android:orientation="vertical"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:id="@+id/linearLayout1">
-		<android.support.design.widget.TextInputEditText
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:minWidth="25px"
-			android:minHeight="25px"
-			android:id="@+id/textInputEditText_CityName" />
-		<Button
-			android:text="Search"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:id="@+id/button_Search" />
-		<LinearLayout
-			android:orientation="horizontal"
-			android:minWidth="25px"
-			android:minHeight="25px"
-			android:layout_width="match_parent"
-			android:layout_height="55.0dp"
-			android:id="@+id/linearLayout_CityAndDate">
-			<TextView
-				android:text="City Name"
-				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="184.0dp"
-				android:layout_height="match_parent"
-				android:gravity="center"
-				android:id="@+id/textView_City" />
-			<TextView
-				android:text="Date"
-				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:gravity="center"
-				android:id="@+id/textView_Date" />
-		</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/textInputEditText_CityName" />
+        <Button
+            android:text="Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_Search" />
 		<ImageView
 			android:src="@drawable/questionmark"
 			android:layout_width="match_parent"
-			android:layout_height="100.0dp"
-			android:id="@+id/imageView_WeatherState" />
+			android:layout_height="112.5dp"
+			android:id="@+id/imageView_WeatherState"
+			android:layout_marginTop="0.0dp" />
 		<TextView
 			android:text=""
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="match_parent"
-			android:layout_height="56.3dp"
+			android:layout_height="44.0dp"
 			android:gravity="center"
 			android:id="@+id/textView_WeatherDescription" />
-		<LinearLayout
-			android:orientation="horizontal"
-			android:minWidth="25px"
-			android:minHeight="25px"
-			android:layout_width="match_parent"
-			android:layout_height="65.0dp"
-			android:id="@+id/linearLayout_Temperature">
-			<ImageView
-				android:src="@drawable/temperature"
-				android:layout_width="120.0dp"
-				android:layout_height="60.0dp"
-				android:id="@+id/imageView_Temperature" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="55.0dp"
+			android:gravity="center"
+            android:id="@+id/linearLayout_CityAndDate">
 			<TextView
-				android:text="Temperature"
+				android:text="City"
 				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="match_parent"
+				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
-				android:id="@+id/textView_Temperature" />
-		</LinearLayout>
-		<LinearLayout
-			android:orientation="horizontal"
-			android:minWidth="25px"
-			android:minHeight="25px"
+				android:gravity="center"
+				android:id="@+id/textView_City"
+				android:layout_marginRight="100.0dp" />
+            <TextView
+                android:text="Date"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/textView_Date" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="60.0dp"
+            android:id="@+id/linearLayout_Temperature">
+            <ImageView
+                android:src="@drawable/temperature"
+                android:layout_width="120.0dp"
+                android:layout_height="60.0dp"
+                android:id="@+id/imageView_Temperature" />
+            <TextView
+                android:text="Temperature"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textView_Temperature" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="60.0dp"
+            android:id="@+id/linearLayout_Humidity">
+            <ImageView
+                android:src="@drawable/humidity"
+                android:layout_width="120.0dp"
+                android:layout_height="60.0dp"
+                android:id="@+id/imageView_Humidity" />
+            <TextView
+                android:text="Humidity"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textView_Humidity" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="60.0dp"
+            android:id="@+id/linearLayout_Wind">
+            <ImageView
+                android:src="@drawable/wind"
+                android:layout_width="120.0dp"
+                android:layout_height="60.0dp"
+                android:id="@+id/imageView_Wind" />
+            <TextView
+                android:text="Wind Speed"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textView_Wind" />
+        </LinearLayout>
+		<Button
+			android:text="Forecast"
 			android:layout_width="match_parent"
-			android:layout_height="65.0dp"
-			android:id="@+id/linearLayout_Humidity">
-			<ImageView
-				android:src="@drawable/humidity"
-				android:layout_width="120.0dp"
-				android:layout_height="60.0dp"
-				android:id="@+id/imageView_Humidity" />
-			<TextView
-				android:text="Humidity"
-				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:id="@+id/textView_Humidity" />
-		</LinearLayout>
-		<LinearLayout
-			android:orientation="horizontal"
-			android:minWidth="25px"
-			android:minHeight="25px"
-			android:layout_width="match_parent"
-			android:layout_height="65.0dp"
-			android:id="@+id/linearLayout_Wind">
-			<ImageView
-				android:src="@drawable/wind"
-				android:layout_width="120.0dp"
-				android:layout_height="60.0dp"
-				android:id="@+id/imageView_Wind" />
-			<TextView
-				android:text="Wind Speed"
-				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:id="@+id/textView_Wind" />
-		</LinearLayout>
-	</LinearLayout>
+			android:layout_height="match_parent"
+			android:id="@+id/button_Forecast" />
+    </LinearLayout>
 </RelativeLayout>
