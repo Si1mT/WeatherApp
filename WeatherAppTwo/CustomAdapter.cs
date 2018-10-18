@@ -9,21 +9,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
+using Android;
 
-namespace WeatherAppTwo
+namespace ListViewExample
 {
-    [Activity(Label = "ForecastActivity")]
-    public class ForecastActivity : AppCompatActivity
-    {
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_forecast);
-            // Create your application here
-
-        }
-    }
-
     public class CustomAdapter : BaseAdapter<string>
     {
         List<string> items;
@@ -51,7 +40,7 @@ namespace WeatherAppTwo
         {
             View view = convertView;
             if (view == null)
-                view = context.LayoutInflater.Inflate(Resource.Layout.activity_forecast, null);
+                view = context.LayoutInflater.Inflate(Resource.Layout., null);
 
             view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position];
             return view;

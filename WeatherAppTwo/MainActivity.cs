@@ -5,6 +5,8 @@ using Android.Runtime;
 using Android.Widget;
 using WeatherAppTwo.Core;
 using System;
+using System.Collections.Generic;
+using Android.Content;
 
 namespace WeatherAppTwo
 {
@@ -13,6 +15,7 @@ namespace WeatherAppTwo
     {
         Button buttonSearch;
         Button buttonForecast;
+        List<string> countries = new List<string>() { "esimene", "teine" };
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -24,14 +27,11 @@ namespace WeatherAppTwo
             buttonForecast = FindViewById<Button>(Resource.Id.button_Forecast);
 
 
+
             buttonSearch.Click += Button_Click;
             buttonForecast.Click += Button_Click_Forecast;
         }
 
-        private void Button_Click_Forecast(object sender, EventArgs e)
-        {
-
-        }
         private async void Button_Click(object sender, EventArgs e)
         {
             var editTextCityName = FindViewById<EditText>(Resource.Id.textInputEditText_CityName);
@@ -82,6 +82,17 @@ namespace WeatherAppTwo
                     break;
 
             }
+        }
+
+        private void Button_Click_Forecast(object sender, EventArgs e)
+        {
+            //Toast.MakeText(Application, ((TextView)args.View).Text, ToastLength.Long).Show();
+            var list = FindViewById<ListView>(Resource.Id.listView1);
+            list.Adapter = new CustomAdapter(this, countries);
+
+            //var fourthActivity = new Intent(this, typeof(Activity));
+            var forecastActivity = new Intent(this, typeof(ForecastActivity));
+            StartActivity(forecastActivity);
         }
     }
 }
