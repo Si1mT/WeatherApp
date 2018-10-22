@@ -10,7 +10,7 @@ using Android.Content;
 
 namespace WeatherAppTwo
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AetherDragon", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
         Button buttonSearch;
@@ -25,6 +25,7 @@ namespace WeatherAppTwo
 
             buttonSearch = FindViewById<Button>(Resource.Id.button_Search);
             buttonForecast = FindViewById<Button>(Resource.Id.button_Forecast);
+            var toolbar = FindViewById<Toolbar>(Resource.Layout.);
 
 
 

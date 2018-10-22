@@ -2660,8 +2660,8 @@ namespace WeatherAppTwo
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800c2
-			public const int masked = 2131230914;
+			// aapt resource value: 0x7f0800c3
+			public const int masked = 2131230915;
 			
 			// aapt resource value: 0x7f0800b3
 			public const int media_actions = 2131230899;
@@ -2903,6 +2903,9 @@ namespace WeatherAppTwo
 			// aapt resource value: 0x7f08006f
 			public const int title_template = 2131230831;
 			
+			// aapt resource value: 0x7f0800c1
+			public const int toolbar1 = 2131230913;
+			
 			// aapt resource value: 0x7f08003e
 			public const int top = 2131230782;
 			
@@ -2939,8 +2942,8 @@ namespace WeatherAppTwo
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800c1
-			public const int visible = 2131230913;
+			// aapt resource value: 0x7f0800c2
+			public const int visible = 2131230914;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3190,6 +3193,9 @@ namespace WeatherAppTwo
 			// aapt resource value: 0x7f04003d
 			public const int tooltip = 2130968637;
 			
+			// aapt resource value: 0x7f04003e
+			public const int top_toolbar = 2130968638;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -3360,6 +3366,9 @@ namespace WeatherAppTwo
 		
 		public partial class Style
 		{
+			
+			// aapt resource value: 0x7f0a0181
+			public const int AetherDragon = 2131362177;
 			
 			// aapt resource value: 0x7f0a0095
 			public const int AlertDialog_AppCompat = 2131361941;
