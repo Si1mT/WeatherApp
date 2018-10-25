@@ -2,59 +2,51 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V7.App;
+using WeatherAppTwo;
+using WeatherAppTwo.Core;
 
 namespace WeatherAppTwo
 {
     [Activity(Label = "ForecastActivity")]
     public class ForecastActivity : AppCompatActivity
     {
+        public string CityID;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_forecast);
-            // Create your application here
+            CityID = Intent.GetStringExtra("WeatherData");
+            forecast("s");
+        }
+        //, System.EventArgs e
+        private async void forecast(object sender)
+        {
+            //item.Date, item.description, item.Temperature
+            List<string> forecastweather = new List<string>();
+            List<string> Date = new List<string>();
+            List<string> Temperature = new List<string>();
+            List<string> description = new List<string>();
+            List<Weather> weather = await Core.Core.GetWeatherForecast(CityID);
+            foreach (var item in weather)
+            {
+                Date.Add(item.Date);
+                Temperature.Add(item.Temperature);
+                description.Add(item.description);
 
+            }
+            ListView list = FindViewById<ListView>(Resource.Id.listView1);
+            list.Adapter = new CustomAdapter(this, forecastweather, Date, Temperature, description);
         }
     }
 
-    public class CustomAdapter : BaseAdapter<string>
-    {
-        List<string> items;
-        Activity context;
-
-        public CustomAdapter(Activity context, List<string> items) : base()
-        {
-            this.context = context;
-            this.items = items;
-        }
-
-        public override string this[int position]
-        {
-            get { return items[position]; }
-        }
-
-        public override int Count { get { return items.Count; } }
-
-        public override long GetItemId(int position)
-        {
-            return position;
-        }
-
-        public override View GetView(int position, View convertView, ViewGroup parent)
-        {
-            View view = convertView;
-            if (view == null)
-                view = context.LayoutInflater.Inflate(Resource.Layout.activity_forecast, null);
-
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position];
-            return view;
-        }
-    }
-} 
+}
