@@ -25,25 +25,21 @@ namespace WeatherAppTwo.Core
             return weather;
         }
 
-        public static async Task<List<Forecast>> GetForecast(string inputID)
+        public static async Task<List<Forecast>> GetForecast(string input)
         {
             string key = "43228feda419c96e87f49c3f0b8bbaea";
-            string queryString = "http://api.openweathermap.org/data/2.5/forecast?q=" + inputID + "&units=metric&appid=" + key;
+            string queryString = "http://api.openweathermap.org/data/2.5/forecast?q=" + input + "&units=metric&appid=" + key;
             dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
 
             var forecast = new List<Forecast>();
 
             int currentIterator = 0;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
                 Forecast weather = new Forecast();
-                //weather.Date = UnixTimeToString((long)results["list"][currentIterator]["dt"]);
                 weather.TempMin = (string)results["list"][currentIterator]["main"]["temp_min"] + " C";
                 weather.TempMax = (string)results["list"][currentIterator]["main"]["temp_max"] + " C";
-                //weather.Visibility = "_" + (string)results["list"][currentIterator]["weather"][0]["icon"];
-                //weather.Date = UnixTimeToString((long)results["list"][currentIterator]["dt"]);
 
-                currentIterator += 8;
                 forecast.Add(weather);
             }
             return forecast;

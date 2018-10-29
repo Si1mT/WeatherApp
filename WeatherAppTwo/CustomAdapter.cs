@@ -18,7 +18,6 @@ namespace WeatherAppTwo
         List<int> images;
         Activity context;
 
-
         public CustomAdapter(Activity context, List<Forecast> items, List<int> images) : base()
         {
             this.context = context;
@@ -44,10 +43,6 @@ namespace WeatherAppTwo
             if (view == null)
                 view = context.LayoutInflater.Inflate(Resource.Layout.custom_row, null);
 
-            //view.FindViewById<TextView>(Resource.Id.dateTxt).Text = items[position].Date;
-            //view.FindViewById<ImageView>(Resource.Id.weatherPicture).SetImageResource(images[position]);
-            //view.FindViewById<TextView>(Resource.Id.tempMin).Text = items[position].Temperature_Min;
-            //view.FindViewById<TextView>(Resource.Id.tempMax).Text = items[position].Temperature_Max;
             return view;
 
         }
