@@ -25,12 +25,16 @@ namespace WeatherAppTwo
 
             buttonSearch = FindViewById<Button>(Resource.Id.button_Search);
             buttonForecast = FindViewById<Button>(Resource.Id.button_Forecast);
-            var toolbar = FindViewById<Toolbar>(Resource.Layout.);
-
-
+            //var toolbar = FindViewById<Toolbar>(Resource.Layout.);
 
             buttonSearch.Click += Button_Click;
             buttonForecast.Click += Button_Click_Forecast;
+        }
+
+        private void Button_Click_Forecast(object sender, EventArgs e)
+        {
+            var forecastActivity = new Intent(this, typeof(ForecastActivity));
+            StartActivity(forecastActivity);
         }
 
         private async void Button_Click(object sender, EventArgs e)
@@ -85,15 +89,6 @@ namespace WeatherAppTwo
             }
         }
 
-        private void Button_Click_Forecast(object sender, EventArgs e)
-        {
-            //Toast.MakeText(Application, ((TextView)args.View).Text, ToastLength.Long).Show();
-            var list = FindViewById<ListView>(Resource.Id.listView1);
-            list.Adapter = new CustomAdapter(this, countries);
-
-            //var fourthActivity = new Intent(this, typeof(Activity));
-            var forecastActivity = new Intent(this, typeof(ForecastActivity));
-            StartActivity(forecastActivity);
-        }
+        
     }
 }

@@ -149,7 +149,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\top_toolbar.axml">
+    <AndroidResource Include="Resources\layout\custom_row.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
