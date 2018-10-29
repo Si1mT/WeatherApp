@@ -9,6 +9,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
+using Android;
 
 namespace WeatherAppTwo
 {
@@ -17,19 +18,20 @@ namespace WeatherAppTwo
     {
         ListView listView;
         EditText editTextCity;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_forecast);
+            //SetContentView(Resource.Layout.activity_forecast);
 
-            listView = FindViewById<ListView>(Resource.Id.listView1);
+            //listView = FindViewById<ListView>(Resource.Id.listView1);
 
             // Create your application here
         }
 
         private void ForecastButton_Click(object sender, EventArgs e)
         {
-            editTextCity = FindViewById<EditText>(Resource.Id.edit);
+            //editTextCity = FindViewById<EditText>(Resource.Id.edit);
             Forecast();
         }
 

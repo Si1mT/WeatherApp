@@ -15,13 +15,11 @@ namespace WeatherAppTwo
     public class CustomAdapter : BaseAdapter<Forecast>
     {
         List<Forecast> items;
-        List<int> images;
         Activity context;
 
         public CustomAdapter(Activity context, List<Forecast> items, List<int> images) : base()
         {
             this.context = context;
-            this.images = images;
             this.items = items;
         }
 

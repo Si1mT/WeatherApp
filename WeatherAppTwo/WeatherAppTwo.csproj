@@ -144,12 +144,12 @@
     <AndroidResource Include="Resources\drawable\questionmark.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_forecast.axml">
+    <AndroidResource Include="Resources\layout\custom_row.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\custom_row.axml">
+    <AndroidResource Include="Resources\layout\forecast.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
