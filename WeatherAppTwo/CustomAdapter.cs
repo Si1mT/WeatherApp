@@ -39,10 +39,10 @@ namespace ListViewExample
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             View view = convertView;
-            //if (view == null)
-            //    view = context.LayoutInflater.Inflate(Resource.Layout., null);
+            if (view == null)
+                view = context.LayoutInflater.Inflate(Resource.Layout., null);
 
-            //view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position];
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position];
             return view;
         }
     }
