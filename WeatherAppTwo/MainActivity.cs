@@ -12,7 +12,14 @@ namespace WeatherAppTwo
     public class MainActivity : AppCompatActivity
     {
         Button buttonSearch;
-        Button buttonForecast;
+        EditText editTextCityName;
+        TextView textViewCity;
+        TextView textViewTemperature;
+        TextView textViewDate;
+        TextView textViewHumidity;
+        TextView textViewWind;
+        ImageView imageViewWeatherState;
+        TextView textViewWeatherDescription;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -20,32 +27,23 @@ namespace WeatherAppTwo
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
+            editTextCityName = FindViewById<EditText>(Resource.Id.textInputEditText_CityName);
+            textViewCity = FindViewById<TextView>(Resource.Id.textView_City);
+            textViewDate = FindViewById<TextView>(Resource.Id.textView_Date);
             buttonSearch = FindViewById<Button>(Resource.Id.button_Search);
-            buttonForecast = FindViewById<Button>(Resource.Id.button_Forecast);
-
+            textViewTemperature = FindViewById<TextView>(Resource.Id.textView_Temperature);
+            textViewHumidity = FindViewById<TextView>(Resource.Id.textView_Humidity);
+            textViewWind = FindViewById<TextView>(Resource.Id.textView_Wind);
+            imageViewWeatherState = FindViewById<ImageView>(Resource.Id.imageView_WeatherState);
+            textViewWeatherDescription = FindViewById<TextView>(Resource.Id.textView_WeatherDescription);
 
             buttonSearch.Click += Button_Click;
-            buttonForecast.Click += Button_Click_Forecast;
         }
 
-        private void Button_Click_Forecast(object sender, EventArgs e)
-        {
-
-        }
         private async void Button_Click(object sender, EventArgs e)
         {
-            var editTextCityName = FindViewById<EditText>(Resource.Id.textInputEditText_CityName);
             string city = editTextCityName.Text;
             var weather = await Core.Core.GetWeather("asd", city);
-
-            var textViewCity = FindViewById<TextView>(Resource.Id.textView_City);
-            var textViewDate = FindViewById<TextView>(Resource.Id.textView_Date);
-            var buttonSearch = FindViewById<Button>(Resource.Id.button_Search);
-            var textViewTemperature = FindViewById<TextView>(Resource.Id.textView_Temperature);
-            var textViewHumidity = FindViewById<TextView>(Resource.Id.textView_Humidity);
-            var textViewWind = FindViewById<TextView>(Resource.Id.textView_Wind);
-            var imageViewWeatherState = FindViewById<ImageView>(Resource.Id.imageView_WeatherState);
-            var textViewWeatherDescription = FindViewById<TextView>(Resource.Id.textView_WeatherDescription);
 
             textViewCity.Text = editTextCityName.Text;
             textViewTemperature.Text = weather.Temperature;
