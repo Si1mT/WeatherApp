@@ -21,7 +21,27 @@ namespace WeatherAppTwo.Core
             weather.WindSpeed = (string)results["wind"]["speed"] + "m/s";
             weather.WeatherState = (string)results["weather"][0]["description"];
             weather.WeatherDescription = (string)results["weather"][0]["main"];
+            weather.ID = (string)results["id"];
 
+            return weather;
+        }
+
+        public static async Task<List<Weather>> GetWeatherForecast(string CityID)
+        {
+
+            List<Weather> weather = new List<Weather>() { };
+
+            string key = "43228feda419c96e87f49c3f0b8bbaea";
+            string queryString = "http://api.openweathermap.org/data/2.5/forecast?id=" + CityID + "&APPID=" + key + "&units=metric";
+            dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
+            for (int i = 0; i < 39; i += 8)
+            {
+                var weatherforecast = new Weather();
+                weatherforecast.Temperature = (string)results["list"][i]["main"]["temp"] + "C";
+                weatherforecast.WeatherDescription = (string)results["list"][i]["weather"][0]["description"];
+                weatherforecast.Date = (string)results["list"][i]["dt_txt"];
+                weather.Add(weatherforecast);
+            }
             return weather;
         }
     }

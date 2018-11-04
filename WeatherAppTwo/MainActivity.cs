@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Widget;
 using WeatherAppTwo.Core;
 using System;
+using Android.Content;
 
 namespace WeatherAppTwo
 {
@@ -12,6 +13,7 @@ namespace WeatherAppTwo
     public class MainActivity : AppCompatActivity
     {
         Button buttonSearch;
+        Button buttonForecast;
         EditText editTextCityName;
         TextView textViewCity;
         TextView textViewTemperature;
@@ -20,11 +22,11 @@ namespace WeatherAppTwo
         TextView textViewWind;
         ImageView imageViewWeatherState;
         TextView textViewWeatherDescription;
+        public string id;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
             editTextCityName = FindViewById<EditText>(Resource.Id.textInputEditText_CityName);
@@ -36,8 +38,17 @@ namespace WeatherAppTwo
             textViewWind = FindViewById<TextView>(Resource.Id.textView_Wind);
             imageViewWeatherState = FindViewById<ImageView>(Resource.Id.imageView_WeatherState);
             textViewWeatherDescription = FindViewById<TextView>(Resource.Id.textView_WeatherDescription);
+            buttonForecast = FindViewById<Button>(Resource.Id.button_Forecast);
 
             buttonSearch.Click += Button_Click;
+            buttonForecast.Click += Button_Forecast_Click;
+        }
+
+        private void Button_Forecast_Click(object sender, EventArgs e)
+        {
+            var ForecastActivity = new Intent(this, typeof(ForecastActivity));
+            ForecastActivity.PutExtra("WeatherData", id);
+            StartActivity(ForecastActivity);
         }
 
         private async void Button_Click(object sender, EventArgs e)
@@ -51,6 +62,7 @@ namespace WeatherAppTwo
             textViewWind.Text = weather.WindSpeed;
             textViewDate.Text = DateTime.Now.ToString("MMMM dd");
             textViewWeatherDescription.Text = weather.WeatherDescription;
+            id = weather.ID;
 
             switch (weather.WeatherState)
             {
