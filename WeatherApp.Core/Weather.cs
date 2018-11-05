@@ -14,6 +14,6 @@ namespace WeatherAppTwo
         public string WeatherState { get; set; } = " ";
         public string WeatherDescription { get; set; } = " ";
         public string Date { get; set; } = " ";
-        public string ID { get; set; } = "";
+        public string ID { get; set; } = " ";
     }
 }         

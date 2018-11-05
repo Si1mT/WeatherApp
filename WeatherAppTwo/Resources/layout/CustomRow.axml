@@ -21,12 +21,14 @@
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
-			android:id="@+id/textView2" />
+			android:id="@+id/textView2"
+			android:layout_marginLeft="8.0dp" />
 		<TextView
 			android:text="Large Text"
 			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
-			android:id="@+id/textView3" />
+			android:id="@+id/textView3"
+			android:layout_marginLeft="31.0dp" />
 	</LinearLayout>
 </LinearLayout>

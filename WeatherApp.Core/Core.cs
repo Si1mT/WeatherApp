@@ -28,7 +28,6 @@ namespace WeatherAppTwo.Core
 
         public static async Task<List<Weather>> GetWeatherForecast(string CityID)
         {
-
             List<Weather> weather = new List<Weather>() { };
 
             string key = "43228feda419c96e87f49c3f0b8bbaea";
